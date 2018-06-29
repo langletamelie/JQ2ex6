@@ -18,15 +18,12 @@
   <div class="color blue" id="blue"></div>
 </div>
 <script>
-$('#green').mouseenter(function(){
-  $('#text').css('color', 'green');
-})
-$('#red').mouseenter(function(){
-  $('#text').css('color', 'red');
-})
-$('#blue').mouseenter(function(){
-  $('#text').css('color', 'blue');
-})
+$('.color').mouseenter(function(event){
+  $('#text').css('color', event.target.id);
+});
+$('.color').mouseout(function(){
+  $('#text').css('color','black');
+});
 </script>
 </body>
 </html>
